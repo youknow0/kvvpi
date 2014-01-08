@@ -4,6 +4,3 @@
 [submodule "kvvliveapi"]
 	path = kvvliveapi
 	url = git@github.com:youknow0/kvvliveapi.git
-[submodule "Adafruit_CharLCDPlate"]
-	path = Adafruit_CharLCDPlate
-	url = https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code.git
