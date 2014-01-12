@@ -2,6 +2,7 @@
 
 from kvvliveapi.kvvliveapi import get_departures
 from lcdmenu.LCDMenu import *
+import Adafruit_CharLCDPlate
 
 STOP_ID = "de:8212:31"
 
@@ -15,4 +16,4 @@ departures = (get_departures(STOP_ID))
 for d in departures:
 	str_departure = ("%s %s %s" % (d.time, d.route, d.destination))
 
-	menu.add_item(MenuItem(str_deperature, 0)
+	menu.add_item(MenuItem(str_deperature, 0))
