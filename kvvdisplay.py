@@ -14,7 +14,12 @@ menu = Menu(lcd, "Main Menu")
 departures = (get_departures(STOP_ID))
 
 for d in departures:
-	str_departure = ("%s %s %s" % (d.time, d.route, d.destination))
+	time = d.time
+	if d.time == "sofort":
+		time = "0"
+	elif "min" in d.time:
+		time = time.replace("min", "")
+	str_departure = ("%s %s %s" % (d.route, time, d.destination))
 
 	menu.add_item(MenuItem(str_departure.encode('ascii', errors='replace'), 0))
 
