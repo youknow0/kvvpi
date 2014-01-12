@@ -2,7 +2,7 @@
 
 from kvvliveapi.kvvliveapi import get_departures
 from lcdmenu.LCDMenu import *
-import Adafruit_CharLCDPlate
+from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
 
 STOP_ID = "de:8212:31"
 
