@@ -18,8 +18,8 @@ for d in departures:
 	if d.time == "sofort":
 		time = "0"
 	elif "min" in d.time:
-		time = time.replace("min", "")
-	str_departure = ("%s %s %s" % (d.route, time, d.destination))
+		time = time.replace(" min", "")
+	str_departure = ("%s %s %s" % (d.route.ljust(2), time, d.destination))
 
 	menu.add_item(MenuItem(str_departure.encode('ascii', errors='replace'), 0))
 
