@@ -7,11 +7,27 @@ from time import sleep
 
 STOP_ID = "de:8212:31"
 
+
 def load_data():
 	global menu
-	lcd.clear()
-	lcd.message("Loading...\n")
-	departures = (get_departures(STOP_ID))
+	tries = 1
+	had_error = True
+	departures = None
+
+	while had_error:
+		lcd.clear()
+		lcd.message("Loading...\ntry %d" % tries)
+		
+		try:
+			departures = (get_departures(STOP_ID))
+		except:
+			had_error = True
+			sleep(0.25)
+		else:
+			had_error = False
+
+		tries+=1
+	
 	menu.clear_all_items()
 
 	for d in departures:
