@@ -1,0 +1,6 @@
+[submodule "lcdmenu"]
+	path = lcdmenu
+	url = https://github.com/youknow0/lcdmenu.git
+[submodule "kvvliveapi"]
+	path = kvvliveapi
+	url = https://github.com/youknow0/kvvliveapi.git
