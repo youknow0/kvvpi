@@ -16,4 +16,6 @@ departures = (get_departures(STOP_ID))
 for d in departures:
 	str_departure = ("%s %s %s" % (d.time, d.route, d.destination))
 
-	menu.add_item(MenuItem(str_deparature, 0))
+	menu.add_item(MenuItem(str_departure, 0))
+
+menu.get_action()()
